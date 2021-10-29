@@ -24,11 +24,11 @@ class Server {
   }
 
   middlewares() {
-    // Cors
-    this.app.use(cors());
-
     // Desplegar el directorio publico
     this.app.use(express.static(path.resolve(__dirname, '../public')));
+
+    // Cors
+    this.app.use(cors());
   }
 
   execute() {
